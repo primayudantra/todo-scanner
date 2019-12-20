@@ -5,7 +5,9 @@ It's common to see TODO in code. This simple program will find `TODO` in your co
 
 #### How to run?
 ```
-$ node index.js target-folder
+$ npm install -g todo-scanner
+
+$ todo-scanner <optional_folder>
 ```
 
 #### You will see a report like this.
@@ -18,6 +20,10 @@ found at ./target-project/modules/module-a/index.js
 found at ./target-project/modules/module-b/index.js
 found at ./target-project/modules/module-a/repository/index.js
 ```
+
+
+# Demo
+![Demo](https://media.giphy.com/media/IgvxBU51U1AR1tzjAD/giphy.gif)
 
 
 Thanks.
