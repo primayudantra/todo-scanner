@@ -23,7 +23,7 @@ found at ./target-project/modules/module-a/repository/index.js
 
 
 # Demo
-![Demo](https://media.giphy.com/media/IgvxBU51U1AR1tzjAD/giphy.gif)
+![Demo](https://media.giphy.com/media/PlUqv1QvzFnsvy40HN/source.gif)
 
 
 Thanks.
