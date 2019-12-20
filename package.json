@@ -1,0 +1,25 @@
+{
+  "name": "todo-scanner",
+  "version": "1.0.0",
+  "description": "Hi, Prima here.",
+  "preferGlobal": true,
+  "bin": {
+    "todo-scanner": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/primayudantra/todo-scanner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/primayudantra/todo-scanner/issues"
+  },
+  "homepage": "https://github.com/primayudantra/todo-scanner#readme",
+  "dependencies": {
+  }
+}

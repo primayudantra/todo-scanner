@@ -10,8 +10,10 @@ var ToDoScanner = (function () {
         var rootProject = this.rootProject;
         var dir = fs.readdirSync(rootProject);
         dir.forEach(item => {
-            var path = rootProject + '/' + item;
-            retrieveData(path);
+            if(!isExceptionalFolder(item)){
+                var path = rootProject + '/' + item;
+                retrieveData(path);
+            }
         })
     }
 
@@ -29,11 +31,13 @@ var ToDoScanner = (function () {
     checkIsFileOrFolder = function(path) {
         var dir = fs.readdirSync(path);
         dir.forEach(item => {
-            var itemPath = path + '/' + item;
-            fs.stat(itemPath, (err, stats) => {
-                if (stats.isFile()) readFile(itemPath)
-                if (stats.isDirectory()) retrieveData(itemPath)
-            })
+            if (!isExceptionalFolder(item)) {
+                var itemPath = path + '/' + item;
+                fs.stat(itemPath, (err, stats) => {
+                    if (stats.isFile()) readFile(itemPath)
+                    if (stats.isDirectory()) retrieveData(itemPath)
+                })
+            }
         })
     }
 
@@ -50,6 +54,11 @@ var ToDoScanner = (function () {
         if (string.indexOf("TODO") > -1) {
             return true;
         }
+    }
+
+    isExceptionalFolder = function(item){
+        var data = ['vendor', 'vendors', 'node_modules', '.git', 'readme.md', 'vendors','storage']
+        if(data.includes(item)) return true;
     }
 
     return ToDoScanner;

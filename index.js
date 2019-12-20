@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var ToDoScanner = require('./src/lib')
 
 var params = process.argv.slice(2);
