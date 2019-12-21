@@ -57,7 +57,7 @@ var ToDoScanner = (function () {
     }
 
     isExceptionalFolder = function(item){
-        var data = ['vendor', 'vendors', 'node_modules', '.git', 'readme.md', 'vendors','storage']
+        var data = ['vendor', 'vendors', 'node_modules', '.git', 'readme.md','storage']
         if(data.includes(item)) return true;
     }
 
